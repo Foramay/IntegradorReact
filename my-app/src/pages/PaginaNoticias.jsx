@@ -1,7 +1,7 @@
 import Buscador from "../components/Buscador/Buscador";
 import Loading from "../components/Loading/Loading";
 import Navbar from "../components/Navbar/Navbar";
-import Noticia from "../components/Noticia/Noticia";
+import NoticiaList from "../components/Noticia/NoticiaList";
 
 
 import PaginationOutlined from "../components/Pagination/Pagination";
@@ -12,7 +12,7 @@ const PaginaNoticias = () =>{
                 <Navbar/>
                 <Buscador/>
                 <Loading/>
-                <Noticia/>
+                <NoticiaList/>
                 <PaginationOutlined/>
             </main>
         )

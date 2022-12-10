@@ -5,10 +5,6 @@ import './Buscador.css'
 import { useState } from 'react';
 import BotonBuscar from '../BotonBuscar/BotonBuscar';
 
-
-
-
-
 const Buscador = () => {
   const [buscadorNoticias, setBuscadorNoticias] = useState();
   
@@ -16,6 +12,7 @@ const Buscador = () => {
   const onBuscar = (e) => {
     console.log(buscadorNoticias)
   }
+
   return (
     <Box className='container-field-noticias'
       sx={{
@@ -31,7 +28,10 @@ const Buscador = () => {
         setBuscadorNoticias(e.target.value)
       }}
       />
-     <BotonBuscar onBuscar={onBuscar} >Buscar Noticia</BotonBuscar>
+     <BotonBuscar 
+     onBuscar={onBuscar} 
+     infoState={buscadorNoticias}
+     />
     </Box>
   );
 }
