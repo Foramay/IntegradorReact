@@ -4,13 +4,14 @@ import TextField from '@mui/material/TextField';
 import './Buscador.css'
 import { useState } from 'react';
 import BotonBuscar from '../BotonBuscar/BotonBuscar';
+import { getNoticiasServer } from '../../service/noticiasJson';
 
 const Buscador = () => {
   const [buscadorNoticias, setBuscadorNoticias] = useState();
   
-  
-  const onBuscar = (e) => {
-    console.log(buscadorNoticias)
+  const onBuscar = async (buscadorNoticias) => {
+    const news = await getNoticiasServer(buscadorNoticias);
+    console.log(news);
   }
 
   return (
