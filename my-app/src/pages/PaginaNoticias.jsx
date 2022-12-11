@@ -24,7 +24,7 @@ const PaginaNoticias = () =>{
                 <Navbar/>
                 <Buscador onBuscar={onBuscar}/>
                 {isLoading && <Loading/>}
-                {noticias && <NoticiaList/>}
+                {noticias && <NoticiaList noticias={noticias}/>}
                 {noticias && <PaginationOutlined/>}
             </main>
         )

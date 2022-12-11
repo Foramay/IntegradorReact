@@ -1,8 +1,8 @@
 import Noticia from "./Noticia"
 
-const NoticiaList = () => {
-    return [1, 2, 3].map(() => {
-        return <Noticia/>
+const NoticiaList = ({noticias}) => {
+    return noticias.map((noticia) => {
+        return <Noticia noticia={noticia}/>
     })
 }
 

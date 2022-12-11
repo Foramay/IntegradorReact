@@ -6,22 +6,23 @@ import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
 import './Noticia.css'
 
-const Noticia = () => {
+const Noticia = ({noticia}) => {
+  console.log(noticia);
   return (
     <Card className='carta-noticia' >
       <CardActionArea>
+        <Typography gutterBottom variant="h5" component="div">
+            {noticia.title}
+          </Typography>
         <CardMedia
           component="img"
           height="140"
-          image="/static/images/cards/contemplative-reptile.jpg"
-          alt="news image"
+          image={noticia.urlToImage}
+          alt={noticia.tittle}
         />
         <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
-            titulo
-          </Typography>
           <Typography variant="body2" color="text.secondary">
-            descripcion
+            {noticia.source.name}
           </Typography>
         </CardContent>
       </CardActionArea>
