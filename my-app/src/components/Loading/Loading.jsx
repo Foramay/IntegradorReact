@@ -9,6 +9,15 @@ const Loading = () => {
       <Skeleton />
       <Skeleton animation="wave" />
       <Skeleton animation={false} />
+      <Skeleton />
+      <Skeleton animation="wave" />
+      <Skeleton animation={false} />
+      <Skeleton />
+      <Skeleton animation="wave" />
+      <Skeleton animation={false} />
+      <Skeleton />
+      <Skeleton animation="wave" />
+      <Skeleton animation={false} />
     </Box>
   );
 }
