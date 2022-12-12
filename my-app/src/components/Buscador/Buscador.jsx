@@ -9,7 +9,8 @@ import BotonBuscar from '../BotonBuscar/BotonBuscar';
 const Buscador = (props) => {
   const [buscadorNoticias, setBuscadorNoticias] = useState("");
   const {onBuscar} = props;
-  
+
+  console.log(`${buscadorNoticias } LOCO`);
   return (
     <Box className='container-field-noticias'
       sx={{
@@ -25,10 +26,8 @@ const Buscador = (props) => {
         setBuscadorNoticias(e.target.value)
       }}
       />
-     <BotonBuscar 
-     onBuscar={onBuscar} 
-     infoState={buscadorNoticias}
-     />
+     {buscadorNoticias.length > 2 && <BotonBuscar onBuscar={onBuscar} infoState={buscadorNoticias}
+     />}
     </Box>
   );
 }
