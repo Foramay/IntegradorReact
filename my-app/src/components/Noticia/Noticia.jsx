@@ -7,7 +7,7 @@ import { CardActionArea } from '@mui/material';
 import './Noticia.css'
 
 const Noticia = ({noticia}) => {
-  console.log(noticia);
+  
   return (
     <Card className='carta-noticia' >
       <CardActionArea>

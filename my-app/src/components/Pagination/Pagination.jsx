@@ -5,10 +5,21 @@ import './Pagination.css'
 
 
 
-export default function PaginationOutlined() {
+export default function PaginationOutlined({
+  cantidadPaginas,
+  onChange
+}) {
+  const cambiaPagina = ( _evento, pagina) => {
+    onChange(pagina)
+  };
   return (
     <Stack className='pagination-noticias' spacing={2}>
-      <Pagination count={10} variant="outlined" color="primary" />
+      <Pagination 
+      count={cantidadPaginas} 
+      variant="outlined" 
+      color="primary" 
+      onChange={cambiaPagina}
+      />
     </Stack>
   );
 }
