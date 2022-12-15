@@ -6,7 +6,7 @@ import PaginaNoticias from './pages/PaginaNoticias';
 function App() {
   const router = createBrowserRouter([
     {
-      path: "/",
+      path: "/noticias",
       element: <PaginaNoticias/>,
     },
   ]);

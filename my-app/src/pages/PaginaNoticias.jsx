@@ -5,27 +5,37 @@ import Navbar from "../components/Navbar/Navbar";
 import NoticiaList from "../components/Noticia/NoticiaList";
 import PaginationOutlined from "../components/Pagination/Pagination";
 import { getNoticiasServer } from "../service/noticiasJson";
-import './PaginaNoticia.css'
+import './PaginaNoticia.css';
+import { useSearchParams } from 'react-router-dom';
+import { useEffect } from "react";
 
 const PaginaNoticias = () =>{
   const [noticias, setNoticias] = useState();
   const [isLoading, setIsLoading] = useState(false);
   const [cantidadPaginas, setCantidadPaginas] = useState(1);
+  const [searchParams, setSearchParams] = useSearchParams();
+  const [pagina, setPagina] = useState();
+ 
+  useEffect(() => {
+    if(searchParams.get('query')){
+      buscarNoticia(pagina);
+    }
+  }, [searchParams, pagina])
   
-  const [buscadorNoticias, setBuscadorNoticias] = useState("");
-
-  const onBuscar = async (buscadorNoticias, pagina=1) => {
-    setIsLoading(true)
-    const {articles: news, totalResults} = await getNoticiasServer(buscadorNoticias, pagina);
-    setBuscadorNoticias(buscadorNoticias)
+  const buscarNoticia = async () => {
+    setIsLoading(true);
+    const {articles: news, totalResults} = await getNoticiasServer(searchParams.get('query'), pagina);    
     setNoticias(news);
     setCantidadPaginas(Math.ceil(parseInt(totalResults)/10));
     setIsLoading(false);
+  }
 
+  const onBuscar = (buscadorNoticias) => {
+    setSearchParams({query : buscadorNoticias});
   }
 
   const onCambioPagina = (pagina) => {
-    onBuscar(buscadorNoticias, pagina);
+    setPagina(pagina);
   }
   
   return (<main className="container-page-noticia">

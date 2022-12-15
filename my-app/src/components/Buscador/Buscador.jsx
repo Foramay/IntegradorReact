@@ -10,7 +10,7 @@ const Buscador = (props) => {
   const [buscadorNoticias, setBuscadorNoticias] = useState("");
   const {onBuscar} = props;
 
-  console.log(`${buscadorNoticias } LOCO`);
+  
   return (
     <Box className='container-field-noticias'
       sx={{

@@ -12,8 +12,7 @@ const BotonBuscar = ( props  ) => {
       <Button 
       variant="contained"
       onClick={() => {
-        onBuscar(infoState)
-        console.log(`${infoState} INFOSTATE	`);
+        onBuscar(infoState);
       }}
       >
         Buscar
