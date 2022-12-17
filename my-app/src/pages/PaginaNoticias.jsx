@@ -8,6 +8,7 @@ import { getNoticiasServer } from "../service/noticiasJson";
 import './PaginaNoticia.css';
 import { useSearchParams } from 'react-router-dom';
 import { useEffect } from "react";
+import TotalResults from "../components/TotalResults/TotalResults";
 
 
 const PaginaNoticias = () =>{
@@ -47,8 +48,8 @@ const PaginaNoticias = () =>{
               <Navbar/>
               <Buscador onBuscar={onBuscar}/>
               {isLoading && <Loading/>}
-              {/*Acá digo que si hay noticias muestro el resultado total */}
-              {noticias && <span>El total de resultados es de {totalResultados}</span>}
+              {/*Acá muestro los resultados obtenidos en la busqueda */ }
+              {noticias && <TotalResults totalResultados={totalResultados}/>}
               {noticias && <NoticiaList noticias={noticias}/>}
               {noticias && <PaginationOutlined cantidadPaginas={cantidadPaginas} onChange={onCambioPagina}/>}
           </main>

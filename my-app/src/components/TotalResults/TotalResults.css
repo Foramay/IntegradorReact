@@ -1,0 +1,33 @@
+.card-total-results{
+    width: 30%;
+    height: 50px;
+    margin: 0 auto;
+    background-color: #1976d2;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.729);
+}
+
+.total-results{
+    color: white;
+    font-family: "Roboto","Helvetica","Arial",sans-serif;
+    font-weight: 500;
+    font-size: 1.10rem;
+    line-height: 1.6;
+    letter-spacing: 0.0075em;
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    padding-top: 10px;
+}
+.card-total-results-else{
+    width: 50%;
+    height: 50px;
+    margin: 0 auto;
+    background-color: #1976d2;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.729);
+}
+.totalresults{
+    color: rgba(0, 0, 0, 0.729);
+}
