@@ -5,6 +5,7 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea} from '@mui/material';
 import './Noticia.css'
+import { DateTime } from "luxon";
 
 const Noticia = ({noticia}) => {
   return (
@@ -23,6 +24,9 @@ const Noticia = ({noticia}) => {
         <CardContent>
           <Typography variant="body2" color="text.secondary">
             {noticia.source.name}
+          </Typography>
+          <Typography variant="body2" color="text.secondary">
+            Publicado {DateTime.fromISO(noticia.publishedAt).toFormat("dd/mm/yyyy")} a las {DateTime.fromISO(noticia.publishedAt).toFormat("HH:mm")} hs.
           </Typography>
         </CardContent>
       </CardActionArea>
