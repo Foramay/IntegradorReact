@@ -7,7 +7,7 @@ En el directorio del proyecto, puede ejecutar:
 ### `npm start`
 
 Ejecuta la aplicación en modo de desarrollo.\
-En [http://localhost:3000](http://localhost:3000/noticias) para verlo en su navegador.
+En [http://localhost:3000/noticias](http://localhost:3000) para verlo en su navegador.
 
 ## Librerias/Frameworks
 
